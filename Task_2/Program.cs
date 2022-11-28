@@ -7,12 +7,12 @@ int DataEntryXY(string str)
     return number;
 }
 
-void FindQvandrat(int x, int y)
+void FindQvandrat(int x)
 {
-    if ((x > 0)&&(y > 0)) Console.WriteLine ("Это первый квадрат");
-    if ((x < 0)&&(y > 0)) Console.WriteLine ("Это второй квадрат");
-    if ((x < 0)&&(y < 0)) Console.WriteLine ("Это третий квадрат");
-    if ((x > 0)&&(y < 0)) Console.WriteLine ("Это четвёртый квадрат");
+    if (x == 1) Console.WriteLine (" (x > 0)&&(y > 0)");
+    if (x == 2) Console.WriteLine ("(x < 0)&&(y > 0)");
+    if (x == 3) Console.WriteLine ("(x < 0)&&(y < 0)");
+    if (x == 4) Console.WriteLine ("(x > 0)&&(y < 0)");
 }
 
 
@@ -20,8 +20,7 @@ void FindQvandrat(int x, int y)
 
 
 
-int x = DataEntryXY("Введите координаты: x = ");
+int x = DataEntryXY("Введите квадрата: ");
 //Console.WriteLine(x);
-int y = DataEntryXY("Введите координаты: y = ");
-//Console.WriteLine(y);
-FindQvandrat (x, y);
+
+FindQvandrat (x);
